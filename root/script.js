@@ -4,51 +4,101 @@ angular.module('myModule', ['angularjs-editable-table']);
 angular.module('myModule').controller('DataAddController', function($scope) {
   'ngInject';
   var vm = this;
-  this.data = [{"partNo":"SWAS_BRO_1","qty":1,"bookingRef":"b4457897","notes":"suppose we might as well clarify our intentions here"}];   
+  this.data = [{}];   
   this.options = {
         disableDelete: false,
         minRecords: 1, // Restrict removing rows if less than given count
         columns: [
             {
-                title: "Part Number",
-                data: "partNo",
+                title: "Driver Name",
+                data: "name",
                 type: {
                     name: "input",
                     required: true,
                     class: "text-center",
-                    placeholder: "Enter part number"
+                    placeholder: "Name"
                 }
             },
             {
-                title: "QTY",
-                data: "qty",
+                title: "Truck Number",
+                data: "truck",
                 type: {
                     name: "input",
                     inputType: "text",
                     inputType: "number",
                     required: true,
                     class: "",
-                    placeholder: "Enter quantity"
+                    placeholder: "#"
                 }
             },
             {
-                title: "Booking ref",
-                data: "bookingRef",
+                title: "Diesel",
+                data: "diesel",
                 type: {
                     name: "input",
                     required: true,
                     class: "",
-                    placeholder: "Enter booking reference"
+                    placeholder: "-"
                 }
             },
             {
-                title: "Notes",
-                data: "notes",
+                title: "DEF",
+                data: "def",
+                type: {
+                    name: "input",
+                    required: true,
+                    class: "",
+                    placeholder: "-"
+                }
+            },
+            {
+                title: "Windshield Washer",
+                data: "windshieldWasher",
+                type: {
+                    name: "input",
+                    required: true,
+                    class: "",
+                    placeholder: "-"
+                }
+            },
+            {
+                title: "RED Antifreeze",
+                data: "redAF",
                 type: {
                     name: "input",
                     required: false,
                     class: "",
-                    placeholder: ""
+                    placeholder: "-"
+                }
+            },
+            {
+                title: "GREEN Antifreeze",
+                data: "greenAF",
+                type: {
+                    name: "input",
+                    required: false,
+                    class: "",
+                    placeholder: "-"
+                }
+            },
+            {
+                title: "Regular Engine Oil",
+                data: "regEngineOil",
+                type: {
+                    name: "input",
+                    required: false,
+                    class: "",
+                    placeholder: "-"
+                }
+            },
+            {
+                title: "Synthetic Engine Oil",
+                data: "synEngineOil",
+                type: {
+                    name: "input",
+                    required: false,
+                    class: "",
+                    placeholder: "-"
                 }
             },
         ],
