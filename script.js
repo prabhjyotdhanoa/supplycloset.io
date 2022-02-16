@@ -1,5 +1,6 @@
 // the form answers can be seen here: https://docs.google.com/spreadsheets/d/1Y1WJyISvDqigF26P847mUXosiHGeJAwiQU_04SqBIN0/edit?usp=sharing
 angular.module('myModule', ['angularjs-editable-table']);
+passkeys = "10607 55555";
 
 angular.module('myModule').controller('DataAddController', function($scope) {
   'ngInject';
@@ -10,22 +11,11 @@ angular.module('myModule').controller('DataAddController', function($scope) {
         minRecords: 1, // Restrict removing rows if less than given count
         columns: [
             {
-                title: "Driver Name",
-                data: "name",
-                type: {
-                    name: "input",
-                    required: true,
-                    class: "text-center",
-                    placeholder: "Name"
-                }
-            },
-            {
                 title: "Truck Number",
                 data: "truck",
                 type: {
                     name: "input",
                     inputType: "text",
-                    inputType: "number",
                     required: true,
                     class: "",
                     placeholder: "#"
@@ -38,7 +28,7 @@ angular.module('myModule').controller('DataAddController', function($scope) {
                     name: "input",
                     required: true,
                     class: "",
-                    placeholder: "-"
+                    placeholder: "0"
                 }
             },
             {
@@ -58,7 +48,7 @@ angular.module('myModule').controller('DataAddController', function($scope) {
                     name: "input",
                     required: true,
                     class: "",
-                    placeholder: "-"
+                    placeholder: "0"
                 }
             },
             {
@@ -66,9 +56,9 @@ angular.module('myModule').controller('DataAddController', function($scope) {
                 data: "redAF",
                 type: {
                     name: "input",
-                    required: false,
+                    required: true,
                     class: "",
-                    placeholder: "-"
+                    placeholder: "0"
                 }
             },
             {
@@ -76,9 +66,9 @@ angular.module('myModule').controller('DataAddController', function($scope) {
                 data: "greenAF",
                 type: {
                     name: "input",
-                    required: false,
+                    required: true,
                     class: "",
-                    placeholder: "-"
+                    placeholder: "0"
                 }
             },
             {
@@ -86,9 +76,9 @@ angular.module('myModule').controller('DataAddController', function($scope) {
                 data: "regEngineOil",
                 type: {
                     name: "input",
-                    required: false,
+                    required: true,
                     class: "",
-                    placeholder: "-"
+                    placeholder: "0"
                 }
             },
             {
@@ -96,7 +86,17 @@ angular.module('myModule').controller('DataAddController', function($scope) {
                 data: "synEngineOil",
                 type: {
                     name: "input",
-                    required: false,
+                    required: true,
+                    class: "",
+                    placeholder: "0"
+                }
+            },
+            {
+                title: "Password",
+                data: "password",
+                type: {
+                    name: "input",
+                    required: true,
                     class: "",
                     placeholder: "-"
                 }
@@ -118,12 +118,16 @@ angular.module('myModule').controller('DataAddController', function($scope) {
         pageLength: 10,
     };
   
-  
   vm.response = JSON.stringify({data:[]});
   vm.submitEnabled = false;
+
   $scope.$watch('vm.data', function(newval, oldval) {    
-    vm.submitEnabled = vm.data.length > 0; // do more fancy checks before allowing the form to submit
+    //vm.submitEnabled = vm.data.length > 0; // do more fancy checks before allowing the form to submit
+    //vm.submitEnabled = vm.data.substring(vm.response.length-8, vm.response.length-3).includes("10607 55555")
     vm.response = JSON.stringify(newval);//sync the value back to hidden field
+    //console.log(vm.response.substring(vm.response.length-8, vm.response.length-3).toString())
+    //console.log(vm.response.substring(vm.response.length-8, vm.response.length-3).includes("10607 55555"))
+    vm.submitEnabled = passkeys.includes(vm.response.substring(vm.response.length-8, vm.response.length-3).toString())
   }, true);
   vm.onLoad = function() {
     if (window.submitted || false) {
