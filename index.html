@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Submit Google Forms with AngularJS</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css'>
+<link rel='stylesheet' href='https://blog.wiseowls.co.nz/wp-content/uploads/2020/02/editable-table.css'>
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="container-fluid" ng-app="myModule" ng-controller="DataAddController as vm">
+  <div class="row">
+    <div class="col-md-12">
+      <h1>Supply Closet Form</h1>
+      <script type="text/javascript">
+        window.submitted = false;
+      </script>
+      <iframe id="hiddenIframe" name="hiddenIframe" onload="if(window.submitted||false){alert('Response saved. You may navigate away now');}"
+        style="display: none;"></iframe>
+      <div class="container">
+        <form action="https://docs.google.com/forms/d/e/1FAIpQLSer6xWgxeYXYd7VgBya6akLhPws-FbNIiOw9lA5-pBAeuj8KA/formResponse" onsubmit="window.submitted=true;" target="hiddenIframe" method="POST">
+          <div class="form-group row">            
+            <div class="col-sm-10">
+              <input type="text" size="1" style="color:white" name="entry.1472329944" ng-model="vm.response" ng-required="true" id="inputStatus" readonly/>                
+              <div editable-table form-instance="formInstance" data="vm.data" options="vm.options" heading="">
+            </div>
+          </div>
+          <div class="form-group row">
+            <div class="offset-sm-2 col-sm-10">
+              <button type="submit" ng-disabled="!vm.submitEnabled" class="btn btn-primary">Submit</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.19/js/jquery.dataTables.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.8/angular.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.5.0/ui-bootstrap-tpls.min.js'></script>
+<script src='https://blog.wiseowls.co.nz/wp-content/uploads/2020/02/editable-table.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
