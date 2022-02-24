@@ -122,12 +122,12 @@ angular.module('myModule').controller('DataAddController', function($scope) {
   vm.submitEnabled = false;
 
   $scope.$watch('vm.data', function(newval, oldval) {    
-    //vm.submitEnabled = vm.data.length > 0; // do more fancy checks before allowing the form to submit
+    vm.submitEnabled = vm.data.length > 0; // do more fancy checks before allowing the form to submit
     //vm.submitEnabled = vm.data.substring(vm.response.length-8, vm.response.length-3).includes("10607 55555")
     vm.response = JSON.stringify(newval);//sync the value back to hidden field
     //console.log(vm.response.substring(vm.response.length-8, vm.response.length-3).toString())
     //console.log(vm.response.substring(vm.response.length-8, vm.response.length-3).includes("10607 55555"))
-    vm.submitEnabled = passkeys.includes(vm.response.substring(vm.response.length-8, vm.response.length-3).toString())
+    //vm.submitEnabled = passkeys.includes(vm.response.substring(vm.response.length-8, vm.response.length-3).toString())
   }, true);
   vm.onLoad = function() {
     if (window.submitted || false) {
