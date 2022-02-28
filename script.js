@@ -51,16 +51,6 @@ angular.module('myModule').controller('DataAddController', function($scope) {
                     placeholder: "0"
                 }
             },
-            //{
-               // title: "RED Antifreeze",
-               // data: "redAF",
-               // type: {
-                 //   name: "input",
-               //     required: true,
-               //     class: "",
-               //     placeholder: "0"
-              //  }
-          //  },
             {
                 title: "GREEN Antifreeze",
                 data: "greenAF",
