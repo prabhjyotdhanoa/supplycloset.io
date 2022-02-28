@@ -115,7 +115,7 @@ angular.module('myModule').controller('DataAddController', function($scope) {
             iconClass: "mdi mdi-close-circle",
             buttonClass: "btn"
         },
-        pageLength: 10,
+        pageLength: 20,
     };
   
   vm.response = JSON.stringify({data:[]});
