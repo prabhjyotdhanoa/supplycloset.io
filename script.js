@@ -52,6 +52,16 @@ angular.module('myModule').controller('DataAddController', function($scope) {
                 }
             },
             {
+                title: "RED Antifreeze",
+                data: "redAF",
+                type: {
+                    name: "input",
+                    required: true,
+                    class: "",
+                    placeholder: "0"
+                }
+            },
+            {
                 title: "GREEN Antifreeze",
                 data: "greenAF",
                 type: {
@@ -105,7 +115,7 @@ angular.module('myModule').controller('DataAddController', function($scope) {
             iconClass: "mdi mdi-close-circle",
             buttonClass: "btn"
         },
-        pageLength: 10,
+        pageLength: 20,
     };
   
   vm.response = JSON.stringify({data:[]});
