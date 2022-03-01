@@ -7,7 +7,7 @@ angular.module('myModule').controller('DataAddController', function($scope) {
   var vm = this;
   this.data = [{}];   
   this.options = {
-        disableDelete: false,
+        disableDelete: true,
         minRecords: 1, // Restrict removing rows if less than given count
         columns: [
             {
