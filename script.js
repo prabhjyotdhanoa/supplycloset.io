@@ -26,7 +26,7 @@ angular.module('myModule').controller('DataAddController', function($scope) {
                 data: "diesel",
                 type: {
                     name: "input",
-                    required: true,
+                    required: false,
                     class: "",
                     placeholder: "0"
                 }
@@ -36,9 +36,9 @@ angular.module('myModule').controller('DataAddController', function($scope) {
                 data: "def",
                 type: {
                     name: "input",
-                    required: true,
+                    required: false,
                     class: "",
-                    placeholder: "-"
+                    placeholder: "0"
                 }
             },
             {
@@ -46,7 +46,7 @@ angular.module('myModule').controller('DataAddController', function($scope) {
                 data: "windshieldWasher",
                 type: {
                     name: "input",
-                    required: true,
+                    required: false,
                     class: "",
                     placeholder: "0"
                 }
@@ -56,7 +56,7 @@ angular.module('myModule').controller('DataAddController', function($scope) {
                 data: "redAF",
                 type: {
                     name: "input",
-                    required: true,
+                    required: false,
                     class: "",
                     placeholder: "0"
                 }
@@ -66,7 +66,7 @@ angular.module('myModule').controller('DataAddController', function($scope) {
                 data: "greenAF",
                 type: {
                     name: "input",
-                    required: true,
+                    required: false,
                     class: "",
                     placeholder: "0"
                 }
@@ -76,7 +76,7 @@ angular.module('myModule').controller('DataAddController', function($scope) {
                 data: "regEngineOil",
                 type: {
                     name: "input",
-                    required: true,
+                    required: false,
                     class: "",
                     placeholder: "0"
                 }
@@ -86,7 +86,7 @@ angular.module('myModule').controller('DataAddController', function($scope) {
                 data: "synEngineOil",
                 type: {
                     name: "input",
-                    required: true,
+                    required: false,
                     class: "",
                     placeholder: "0"
                 }
