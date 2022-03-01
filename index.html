@@ -11,7 +11,7 @@
 <!-- partial:index.partial.html -->
 <div class="container-fluid" ng-app="myModule" ng-controller="DataAddController as vm">
   <div class="row">
-    <div class="col-md-12">
+    <div class="col-xs-12">
       <h1>Supply Closet Form</h1>
       <script type="text/javascript">
         window.submitted = false;
@@ -21,13 +21,13 @@
       <div class="container">
         <form action="https://docs.google.com/forms/d/e/1FAIpQLSer6xWgxeYXYd7VgBya6akLhPws-FbNIiOw9lA5-pBAeuj8KA/formResponse" onsubmit="window.submitted=true;" target="hiddenIframe" method="POST">
           <div class="form-group row">            
-            <div class="col-sm-10">
+            <div class="col-xs-10">
               <input type="text" size="1" style="color:white" name="entry.1472329944" ng-model="vm.response" ng-required="true" id="inputStatus" readonly/>                
               <div editable-table form-instance="formInstance" data="vm.data" options="vm.options" heading="">
             </div>
           </div>
           <div class="form-group row">
-            <div class="offset-sm-2 col-sm-10">
+            <div class="offset-xs-2 col-xs-10">
               <button type="submit" ng-disabled="!vm.submitEnabled" class="btn btn-primary">Submit</button>
             </div>
           </div>
