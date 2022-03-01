@@ -5,7 +5,7 @@ passkeys = "10607 55555";
 angular.module('myModule').controller('DataAddController', function($scope) {
   'ngInject';
   var vm = this;
-  this.data = [{}];   
+  this.data = [{"diesel":"0","def":"0","windshieldWasher":"0","redAF":"0","greenAF":"0","regEngineOil":"0","synEngineOil":"0"}];   
   this.options = {
         disableDelete: true,
         minRecords: 1, // Restrict removing rows if less than given count
@@ -26,7 +26,7 @@ angular.module('myModule').controller('DataAddController', function($scope) {
                 data: "diesel",
                 type: {
                     name: "input",
-                    required: false,
+                    required: true,
                     class: "",
                     placeholder: "0"
                 }
@@ -36,7 +36,7 @@ angular.module('myModule').controller('DataAddController', function($scope) {
                 data: "def",
                 type: {
                     name: "input",
-                    required: false,
+                    required: true,
                     class: "",
                     placeholder: "0"
                 }
@@ -46,7 +46,7 @@ angular.module('myModule').controller('DataAddController', function($scope) {
                 data: "windshieldWasher",
                 type: {
                     name: "input",
-                    required: false,
+                    required: true,
                     class: "",
                     placeholder: "0"
                 }
@@ -56,7 +56,7 @@ angular.module('myModule').controller('DataAddController', function($scope) {
                 data: "redAF",
                 type: {
                     name: "input",
-                    required: false,
+                    required: true,
                     class: "",
                     placeholder: "0"
                 }
@@ -66,7 +66,7 @@ angular.module('myModule').controller('DataAddController', function($scope) {
                 data: "greenAF",
                 type: {
                     name: "input",
-                    required: false,
+                    required: true,
                     class: "",
                     placeholder: "0"
                 }
@@ -76,7 +76,7 @@ angular.module('myModule').controller('DataAddController', function($scope) {
                 data: "regEngineOil",
                 type: {
                     name: "input",
-                    required: false,
+                    required: true,
                     class: "",
                     placeholder: "0"
                 }
@@ -86,7 +86,7 @@ angular.module('myModule').controller('DataAddController', function($scope) {
                 data: "synEngineOil",
                 type: {
                     name: "input",
-                    required: false,
+                    required: true,
                     class: "",
                     placeholder: "0"
                 }
