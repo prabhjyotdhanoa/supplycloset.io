@@ -92,23 +92,13 @@ angular.module('myModule').controller('DataAddController', function($scope) {
                 }
             },
             {
-                title: "Password",
+                title: "Key",
                 data: "password",
                 type: {
                     name: "input",
                     required: true,
                     class: "",
                     placeholder: "-"
-                }
-            },
-            {
-                title: "Notes",
-                data: "notes",
-                type: {
-                    name: "input",
-                    required: false,
-                    class: "",
-                    placeholder: ""
                 }
             },
         ],
@@ -125,7 +115,7 @@ angular.module('myModule').controller('DataAddController', function($scope) {
             iconClass: "mdi mdi-close-circle",
             buttonClass: "btn"
         },
-        pageLength: 20,
+        pageLength: 10,
     };
   
   vm.response = JSON.stringify({data:[]});
