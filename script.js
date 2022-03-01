@@ -92,7 +92,7 @@ angular.module('myModule').controller('DataAddController', function($scope) {
                 }
             },
             {
-                title: "Key",
+                title: "7-digit Passkey",
                 data: "password",
                 type: {
                     name: "input",
