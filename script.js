@@ -5,7 +5,7 @@ passkeys = "10607 55555";
 angular.module('myModule').controller('DataAddController', function($scope) {
   'ngInject';
   var vm = this;
-  this.data = [{"diesel":"0","def":"0","windshieldWasher":"0","redAF":"0","greenAF":"0","regEngineOil":"0","synEngineOil":"0"}];   
+  this.data = [{"$$hashKey":"object:23","truck":"","diesel":"0","def":"0","windshieldWasher":"0","redAF":"0","greenAF":"0","regEngineOil":"0","synEngineOil":"0"}];   
   this.options = {
         disableDelete: true,
         minRecords: 1, // Restrict removing rows if less than given count
