@@ -101,6 +101,16 @@ angular.module('myModule').controller('DataAddController', function($scope) {
                     placeholder: "-"
                 }
             },
+            {
+                title: "Notes",
+                data: "notes",
+                type: {
+                    name: "input",
+                    required: false,
+                    class: "",
+                    placeholder: ""
+                }
+            },
         ],
         callbacks: {
 
