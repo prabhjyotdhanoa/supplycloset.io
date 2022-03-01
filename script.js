@@ -92,7 +92,7 @@ angular.module('myModule').controller('DataAddController', function($scope) {
                 }
             },
             {
-                title: "7-digit Passkey",
+                title: "5-digit key",
                 data: "password",
                 type: {
                     name: "input",
@@ -109,11 +109,6 @@ angular.module('myModule').controller('DataAddController', function($scope) {
             table: "table table-sm table-bordered",
             tableWrapper: "table-wrapper",
             pagination: ""
-        },
-        closeButton: {
-            label: "remove",
-            iconClass: "mdi mdi-close-circle",
-            buttonClass: "btn"
         },
         pageLength: 10,
     };
